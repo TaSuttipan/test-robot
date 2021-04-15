@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation
 Library    DateTime
-Library    Selenium2Library
+Library    SeleniumLibrary
 Library    BuiltIn
 Library    String
 Library    OperatingSystem
@@ -14,6 +14,7 @@ Resource    ../Variable/Variable_Offer_SMP.robot
 Resource    ../Variable/Variable_Article_AEM.robot
 Resource    ../Keywords/Keywords.robot
 Resource    ../Keywords/Keywords_Article_AEM.robot
+Test Setup     Open Chrome
 Suite Teardown     Close Browser
 
 
@@ -22,8 +23,9 @@ Login AEM
     Get Date and DateTime
     Get Date of AEM
     Get Date of SMP
+    Login AEM with test-approver account
     Check if Questionnaire Article AEM
-    Login AEM with test approver account
+
 
 Article_AEM_1 Create Articles page "TEST_ARTICLE_1" in folder English
     Article_AEM_1 Step05 Click English

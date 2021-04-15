@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation
 Library    DateTime
-Library    Selenium2Library
+Library    SeleniumLibrary
 Library    BuiltIn
 Library    String
 Library    OperatingSystem
@@ -13,7 +13,6 @@ Resource    ../Variable/Variable_Login_SMP.robot
 Resource    ../Variable/Variable_Offer_SMP.robot
 Resource    ../Variable/Variable_Article_AEM.robot
 Resource    ../Keywords/Keywords.robot
-#Suite Teardown     Close Browse
 
 
 *** Keywords ***
@@ -441,7 +440,7 @@ Article_AEM_4 Step12 Click Preview and verify Articles page
 
 
 Article_AEM_5 Step09 Edit value in Basic tab
-    Go to             https://uatcreator.the1.co.th/editor.html/content/the1/api/th/en/articles/${date_today}_test-1_aem1.html
+    Go to             https://uatcreator.the1.co.th/editor.html/content/the1/api/th/en/articles/${date_today}_test-1aem1.html
     sleep  2s
     sleep  2s
     Click Element AEM                   ${btn Preview}
@@ -558,7 +557,7 @@ Article_AEM_5 Step13 Click Preview and verify Articles page
 
 
 Article_AEM_6 Step09 Edit value in Basic tab
-    Go to             https://uatcreator.the1.co.th/editor.html/content/the1/api/th/th/articles/${date_today}_test-1_aem1.html
+    Go to             https://uatcreator.the1.co.th/editor.html/content/the1/api/th/th/articles/${date_today}_test-1aem1.html
     sleep  2s
     sleep  2s
     Click Element AEM                   ${btn Preview}

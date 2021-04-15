@@ -1,5 +1,5 @@
 *** Settings ***
-Library    Selenium2Library
+Library    SeleniumLibrary
 
 
 
@@ -28,6 +28,16 @@ Get Date of AEM
     Set Global Variable     ${date of Issuance Period+20hr_End Date_AEM}
 
 
+Open Chrome
+    ${chrome_options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
+    Call Method    ${chrome_options}    add_argument    --disable-extensions
+    Call Method    ${chrome_options}    add_argument    --headless
+    Call Method    ${chrome_options}    add_argument    --disable-gpu
+    Call Method    ${chrome_options}    add_argument    --no-sandbox
+    Create Webdriver    Chrome    chrome_options=${chrome_options}
+
+
+
 Get Date of SMP
 #date of Issuance Period_Start Date_offer_SMP
     ${date of Issuance Period_Start Date_offer_SMP}    Get Current Date  UTC
@@ -51,7 +61,6 @@ Get Date and Time Today of SMP
 
 
 Login AEM with test-approver account
-    Open Browser    about:blank    chrome
     Maximize Browser Window
     Go To           ${url_AEM}
     Click Element AEM          ${btn_sign_in_locally_AEM}

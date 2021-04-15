@@ -5,7 +5,7 @@ Library           RequestsLibrary
 Library           DateTime
 Library           String
 Library           ExcelLibrary
-Library           Selenium2Library
+Library           SeleniumLibrary
 Library           CSVLibrary
 Library           OperatingSystem
 

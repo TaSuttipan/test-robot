@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation
-Library    Selenium2Library
+Library    SeleniumLibrary
 Library    BuiltIn
 Library    String
 Resource    ../Variable/Variable_Login_AEM.robot

@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation
 Library    DateTime
-Library    Selenium2Library
+Library    SeleniumLibrary
 Library    BuiltIn
 Library    String
 Library    OperatingSystem
@@ -22,8 +22,9 @@ Login AEM
     Get Date and DateTime
     Get Date of AEM
     Get Date of SMP
+    Login AEM with test-approver account
     Check if Questionnaire Article The1Exclusive AEM
-    Login AEM with test approver account
+
 
 #******EN******
 

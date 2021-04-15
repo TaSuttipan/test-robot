@@ -1,5 +1,5 @@
 *** Settings ***
-Library    Selenium2Library
+Library    SeleniumLibrary
 
 *** Variable ***
 ${Name_Category_01}                PublicRegression

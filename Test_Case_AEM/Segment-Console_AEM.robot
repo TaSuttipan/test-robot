@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation
 Library    DateTime
-Library    Selenium2Library
+Library    SeleniumLibrary
 Library    BuiltIn
 Library    String
 Resource    ../Variable/Variable_Login_AEM.robot
@@ -20,7 +20,6 @@ Login AEM with test approver account
     Get Date of AEM
     Get Date of SMP
     Login AEM with test-approver account
-    Login AEM with test approver account
     Check if Questionnaire segment-console AEM
 
 

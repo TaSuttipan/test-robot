@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation
 Suite Setup       Set Log Level    TRACE
-Library    Selenium2Library
+Library    SeleniumLibrary
 Library    BuiltIn
 Library    String
 Library    DateTime

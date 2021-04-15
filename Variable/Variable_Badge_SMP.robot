@@ -1,5 +1,5 @@
 *** Settings ***
-Library    Selenium2Library
+Library    SeleniumLibrary
 
 *** Variable ***
 ${NameCampaign}                                          SIT_BadgeV10

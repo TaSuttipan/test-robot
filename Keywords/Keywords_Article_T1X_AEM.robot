@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation
 Library    DateTime
-Library    Selenium2Library
+Library    SeleniumLibrary
 Library    BuiltIn
 Library    String
 Library    OperatingSystem
@@ -13,6 +13,7 @@ Resource    ../Variable/Variable_Login_SMP.robot
 Resource    ../Variable/Variable_Offer_SMP.robot
 Resource    ../Variable/Variable_Article_AEM.robot
 Resource    ../Keywords/Keywords.robot
+Test Setup     Open Chrome
 #Suite Teardown     Close Browse
 
 
